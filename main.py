@@ -52,7 +52,5 @@ def secret():
     '<p>Ты молодец! Я тебе сделаю случайный пароль...'\
     f'<p>{text_password}</p>'\
     '<a href="/">На главную</a>'
-  
-
 
 app.run(debug=True)
