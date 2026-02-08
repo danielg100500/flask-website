@@ -9,7 +9,9 @@ def home():
     '<p></p>'\
     '<a href="/image">Котики и Царь Пушка!</a>'\
     '<p></p>'\
-    '<a href="/secret">ЪI</a>'
+    '<a href="/secret">ЪI</a>'\
+    '<p></p>'\
+    '<a href="/ecology">НЕ ГОТОВО</a>'\
 
 
 @app.route("/random_fact")
@@ -52,5 +54,13 @@ def secret():
     '<p>Ты молодец! Я тебе сделаю случайный пароль...'\
     f'<p>{text_password}</p>'\
     '<a href="/">На главную</a>'
+
+@app.route('/ecology')
+def ecology():
+    return '<li class="list__item">'\
+    '<a href="{{lights + "/10"}}">'\
+    '<img class="item__img" src="../static/img/battery.svg" alt="battery">'\
+    '<span>10 и более</span></a>'\
+    '</li>'
 
 app.run(debug=True)
